@@ -120,6 +120,11 @@ UploadLuxury.Position = UDim2.new(0.455848873, 0, 0.418977439, 0)
 UploadLuxury.Size = UDim2.new(0, 59, 0, 59)
 UploadLuxury.Image = "http://www.roblox.com/asset/?id=16220353811"
 
+local function()
+	wait(20)
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/markxd07/Luxury-Free/main/Auto_Kaitun.lua"))()
+end
+
 -- Scripts:
 
 local function NYDEA_fake_script() -- ScreenGui.NOTIFIACOTn] 
@@ -176,14 +181,10 @@ local function WDIGG_fake_script() -- Frame.LoadScript
 		ColorOpenMenu.Visible = true
 		LuxuryOpenMenu.Visible = true
 		UploadLuxury.Visible = false
-		LogoLuxury.Visible = true
+		LogoLuxury.Visible = false
 		Welcome1.Visible = false
 		Welcome2.Visible = false
 		Menu.Visible = false
-		
-		wait(0.1)
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/markxd07/Luxury-Free/main/Auto_Kaitun.lua"))()
-		end
 	end
 end
 coroutine.wrap(WDIGG_fake_script)()
