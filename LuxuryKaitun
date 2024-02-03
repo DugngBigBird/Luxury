@@ -16,10 +16,11 @@ local LuxuryOpenMenu = Instance.new("ImageLabel")
 local TextButton = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
 local UploadLuxury = Instance.new("ImageLabel")
+local Hu = Instance.new("ImageLabel")
 
 --Properties:
 
-ScreenGui.Parent = game.CoreGui
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
@@ -120,14 +121,19 @@ UploadLuxury.Position = UDim2.new(0.455848873, 0, 0.418977439, 0)
 UploadLuxury.Size = UDim2.new(0, 59, 0, 59)
 UploadLuxury.Image = "http://www.roblox.com/asset/?id=16220353811"
 
-local function()
-	wait(20)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/markxd07/Luxury-Free/main/Auto_Kaitun.lua"))()
-end
+Hu.Name = "Hu"
+Hu.Parent = ScreenGui
+Hu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Hu.BackgroundTransparency = 1.000
+Hu.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Hu.BorderSizePixel = 0
+Hu.Position = UDim2.new(-0.160297841, 0, -0.0174561217, 0)
+Hu.Size = UDim2.new(0, 1376, 0, 470)
+Hu.Image = "http://www.roblox.com/asset/?id=16221256745"
 
 -- Scripts:
 
-local function NYDEA_fake_script() -- ScreenGui.NOTIFIACOTn] 
+local function HOGCRM_fake_script() -- ScreenGui.NOTIFIACOTn] 
 	local script = Instance.new('LocalScript', ScreenGui)
 
 	wait(0.1)
@@ -138,8 +144,8 @@ local function NYDEA_fake_script() -- ScreenGui.NOTIFIACOTn]
 		Duration = "6";
 	})
 end
-coroutine.wrap(NYDEA_fake_script)()
-local function WDIGG_fake_script() -- Frame.LoadScript 
+coroutine.wrap(HOGCRM_fake_script)()
+local function YFYNN_fake_script() -- Frame.LoadScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Frame = script.Parent.Parent.Frame
@@ -150,6 +156,8 @@ local function WDIGG_fake_script() -- Frame.LoadScript
 	local ColorOpenMenu = script.Parent.Parent.ColorOpenMenu
 	local LuxuryOpenMenu = script.Parent.Parent.LuxuryOpenMenu
 	local UploadLuxury = script.Parent.Parent.UploadLuxury
+	local Hu = script.Parent.Parent.Hu
+	local Sound = script.Parent.Parent.Sound
 	
 	Menu.Visible = false
 	LogoLuxury.Visible = false
@@ -158,6 +166,8 @@ local function WDIGG_fake_script() -- Frame.LoadScript
 	ColorOpenMenu.Visible = false
 	LuxuryOpenMenu.Visible = false
 	UploadLuxury.Visible = false
+	Hu.Visible = false
+	Sound.Playing = false
 	
 	if Frame.Visible == false then
 		wait(6.7)
@@ -181,18 +191,22 @@ local function WDIGG_fake_script() -- Frame.LoadScript
 		ColorOpenMenu.Visible = true
 		LuxuryOpenMenu.Visible = true
 		UploadLuxury.Visible = false
-		LogoLuxury.Visible = false
+		LogoLuxury.Visible = true
 		Welcome1.Visible = false
 		Welcome2.Visible = false
 		Menu.Visible = false
+		
+		wait(0.1)
+		Hu.Visible = true
+		Sound.Playing = true
 	end
 end
-coroutine.wrap(WDIGG_fake_script)()
-local function WPXD_fake_script() -- UploadLuxury.LocalScript 
+coroutine.wrap(YFYNN_fake_script)()
+local function KWEP_fake_script() -- UploadLuxury.LocalScript 
 	local script = Instance.new('LocalScript', UploadLuxury)
 
 	while wait () do
 		script.Parent.Rotation = script.Parent.Rotation + 6
 	end
 end
-coroutine.wrap(WPXD_fake_script)()
+coroutine.wrap(KWEP_fake_script)()
